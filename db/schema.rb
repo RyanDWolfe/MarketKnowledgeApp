@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 5) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "leases", force: :cascade do |t|
     t.string "tenant"
     t.integer "lease_size"
